@@ -1,0 +1,67 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "Home",
+                "enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/station/mark",
+			"style": {
+				"navigationBarTitleText": "Mark Station",
+				"enablePullDownRefresh": false
+			}
+		},
+	    {
+            "path": "pages/my/index",
+            "style": {
+                "navigationBarTitleText": "Ucenter",
+                "enablePullDownRefresh": false
+            }
+        },
+		{
+            "path": "pages/my/register",
+            "style": {
+                "navigationBarTitleText": "Register",
+                "enablePullDownRefresh": false
+            }
+        }
+		,{
+            "path": "pages/my/login",
+            "style": {
+                "navigationBarTitleText": "Login",
+                "enablePullDownRefresh": false
+            } 
+        },
+		{
+            "path": "pages/my/edit",
+            "style": {
+                "navigationBarTitleText": "Edit",
+                "enablePullDownRefresh": false
+            }   
+        }
+    ],
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "black",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"text": "Home"
+		}, {
+			"pagePath": "pages/my/index",
+			"text": "Ucenter"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "Home",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+		
+	},
+	"uniIdRouter": {}
+}
