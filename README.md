@@ -1,7 +1,11 @@
 ## Project Description
+
 ---
+
 ### Project structure
+
 ---
+
 ```code
 -- backend  backend code
    |—— dev.php Configuration file for development environment
@@ -14,26 +18,34 @@
      |── unpackage Compiled code (code to be deployed to the server)
      └── ... Other code is source code
 ```
+
 ### Front-end code
+
 ---
+
 > The front-end is written using the Uniapp framework. If you need to adjust it, you can refer to the Uniapp documentation, whose syntax is similar to Vue.
-[Uniapp](https://zh.uniapp.dcloud.io/tutorial/)
+> [Uniapp](https://zh.uniapp.dcloud.io/tutorial/)
 
 Deployment method: Deploy the code in the unpackage directory of the front-end code directly to the server.
 
 ### Backend code
+
 ---
+
 > The back-end uses the EasySwoole framework. If you need to adjust it, you can refer to the EasySwoole documentation
 
 Deployment method: You can refer to the [EasySwoole](https://www.easyswoole.com/)
 
 ### Database
+
 ---
+
 > The database uses Mysql 5.7
 
 Table description:
 
 1. User table
+
 ```sql
 CREATE TABLE `users` (
   `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary key ID',
@@ -55,6 +67,7 @@ CREATE TABLE `users` (
 ```
 
 2. bus station table
+
 ```sql
 CREATE TABLE `stations` (
   `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary key ID',
@@ -69,9 +82,11 @@ CREATE TABLE `stations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Station coordinate table';
 
 ```
+
 > The icon field is not currently used, and a fixed image is displayed on the front end.
 
 3. User coordinate table
+
 ```sql
 CREATE TABLE `coordinates` (
   `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary key ID',
@@ -87,24 +102,8 @@ CREATE TABLE `coordinates` (
 ```
 
 ### AWS Server Configuration
+
 > The server uses aaPanel, and specific information can be found in the aaPanel documentation
-[aaPanel](https://www.aapanel.com/new/index.html)
+> [aaPanel](https://www.aapanel.com/new/index.html)
 
-1. Connect to the server:
-
-```code
-ssh -i "login_key.pem" admin@ec2-44-204-163-82.compute-1.amazonaws.com
-```
-> The login_key.pem file obtained from the AWS login key file
-
-2. Get the entry address of the aaPanel backend：
-
-```code
-sudo bt default
-```
-
-3. Get the aaPanel operation command:
-
-```code
-sudo bt
-```
+Note that the server is use t2.medium instance type provides 2 vCPUs, 4 GB of memory, and moderate network performance. Make sure that this instance type meets the requirements of your application and workload depending on how many buses and users are using the server. 
